@@ -29,6 +29,7 @@ function displayPostsGrid(posts) {
       <article class="grid-item">
         <img src="${post.acf.add_image}" alt="${post.title.rendered}" />
         <h2>${post.title.rendered} </h2>
+        <p>${post.acf.description} </p>
       </article>
       `
     )
