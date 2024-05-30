@@ -50,6 +50,31 @@ header h1 {
   cursor: pointer;
 }
 
+/* Scroll to top button styles */
+.to-top {
+  background-color: #3F2305;
+  color: white;
+  font-size: 32px;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .4s;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
 
 
 p {

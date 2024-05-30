@@ -34,7 +34,7 @@ function displayPostsGrid(posts) {
         <p><strong>Project description:</strong> ${post.acf.description}</p>
         <p><strong>Client:</strong> ${post.acf.client}</p>
         <br>
-        <a href="${post.acf.link}" target="_blank">View Project</a>
+        <a href="${post.acf.link}" target="_blank">See Project</a>
       </article>
       `
     )
@@ -46,3 +46,16 @@ function displayPostsGrid(posts) {
 function scrollToProjects() {
   document.getElementById('posts-grid').scrollIntoView({ behavior: 'smooth' });
 }
+
+
+
+// Scroll to top
+const toTop = document.querySelector(".to-top");
+
+window.addEventListener("scroll", ( ) => {
+    if (window.pageYOffset > 100) {
+        toTop.classList.add("active");
+    } else {
+        toTop.classList.remove("active");
+    }
+})
