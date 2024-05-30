@@ -13,7 +13,7 @@ async function initApp() {
 
 async function getPosts () {
   const response = await fetch(
-    "https://2sem.programming.mila-hristova.com/wp-json/wp/v2/posts?acf_format=standard"
+    "https://2sem.programming.mila-hristova.com/wp-json/wp/v2/projects?acf_format=standard"
   );
   const data = await response.json();
   return data;
@@ -27,9 +27,13 @@ function displayPostsGrid(posts) {
       "beforeend",
       `
       <article class="grid-item">
-        <img src="${post.acf.add_image}" alt="${post.title.rendered}" />
-        <h2>${post.title.rendered} </h2>
-        <p>${post.acf.description} </p>
+        <img src="${post.acf.image}" alt="${post.title.rendered}" />
+        <h2>${post.title.rendered}</h2>
+        <p> ${post.acf.type}</p>
+        <br>
+        <p><strong>Project description:</strong> ${post.acf.description}</p>
+        <p><strong>Client:</strong> ${post.acf.client}</p>
+        <a href="${post.acf.link}" target="_blank">View Project</a>
       </article>
       `
     )
