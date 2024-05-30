@@ -39,3 +39,9 @@ function displayPostsGrid(posts) {
     )
   }
 }
+
+
+// Function to scroll smoothly to the projects section
+function scrollToProjects() {
+  document.getElementById('posts-grid').scrollIntoView({ behavior: 'smooth' });
+}
