@@ -49,13 +49,28 @@ function scrollToProjects() {
 
 
 
-// Scroll to top
+// Function to scroll smoothly to the top of the page
+function scrollToTopSmooth() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+// Scroll to top button element
 const toTop = document.querySelector(".to-top");
 
-window.addEventListener("scroll", ( ) => {
+// Add click event listener to the scroll-to-top button
+toTop.addEventListener("click", scrollToTopSmooth);
+
+// Add scroll event listener to show/hide the scroll-to-top button based on scroll position
+window.addEventListener("scroll", () => {
     if (window.pageYOffset > 100) {
         toTop.classList.add("active");
     } else {
         toTop.classList.remove("active");
     }
-})
+});
+
+
+

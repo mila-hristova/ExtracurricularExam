@@ -117,3 +117,17 @@ p {
     opacity: 1;
   }
 }
+
+footer {
+  background-color: #3F2305;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+footer h1 {
+  color: white;
+  padding: 2em;
+  margin: 0;
+  font-size: 32px;
+  text-align: center;
+}
+
