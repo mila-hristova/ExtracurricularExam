@@ -33,6 +33,7 @@ function displayPostsGrid(posts) {
         <br>
         <p><strong>Project description:</strong> ${post.acf.description}</p>
         <p><strong>Client:</strong> ${post.acf.client}</p>
+        <br>
         <a href="${post.acf.link}" target="_blank">View Project</a>
       </article>
       `
